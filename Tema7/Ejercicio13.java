@@ -30,11 +30,11 @@ public class Ejercicio13{
 		int aleatorio1;
 		if(opcion==1){
 			if(complejidad==1){
-				for(int i=0;i<valores.length+1;i++){
+				for(int i=0;i<=valores.length+1;i++){
 					aleatorio=alea.nextInt(10);
 					valores[i]=aleatorio;
 					if(i==valores.length-1){
-						for(int k=0;k<valores.length+1;k++){
+						for(int k=0;k<valores.length;k++){
 							System.out.print(valores[k]);
 						}
 					System.out.println();
@@ -55,7 +55,7 @@ public class Ejercicio13{
 							valores[i]=numeros;
 						}
 					}
-					if(i==valores.length){
+					if(i==valores.length-1){
 						for(int k=0;k<valores.length+1;k++){
 							System.out.print(valores[k]);
 						}
@@ -70,7 +70,7 @@ public class Ejercicio13{
 				for(int i=0;i<valores.length;i++){
 					aleatorio=alea.nextInt(26);
 					palabras[i]=Character.toString(letras[aleatorio]);
-					if(i==valores.length){
+					if(i==valores.length-1){
 						for(int k=0;k<valores.length+1;k++){
 							System.out.print(valores[k]);
 						}
@@ -89,7 +89,7 @@ public class Ejercicio13{
 							palabras[i]=palabra;
 						}
 					}
-					if(i==valores.length){
+					if(i==valores.length-1){
 						for(int k=0;k<valores.length+1;k++){
 							System.out.print(valores[k]);
 						}
@@ -110,7 +110,7 @@ public class Ejercicio13{
 						}
 					}
 					palabra="";
-					if(i==palabras.length){
+					if(i==palabras.length-1){
 						for(int k=0;k<valores.length+1;k++){
 							System.out.print(palabras[k]);
 						}
