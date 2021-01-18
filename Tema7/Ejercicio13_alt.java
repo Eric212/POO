@@ -7,7 +7,7 @@ public class Ejercicio13{
 		int opcion;
 		int complejidad;
 		System.out.println("Introduce cuantos valores quieres");
-		tam=lector.nextInt()-1;
+		tam=lector.nextInt();
 		System.out.println("Quiers valores numericos o alfabeticos\n1:Numericos\n2:Alfabeticos");
 		opcion=lector.nextInt();
 		while(opcion<0&&opcion>2){
@@ -25,41 +25,45 @@ public class Ejercicio13{
 	}
 	static void valorizacion(int[] valores,int opcion,int complejidad){
 		Random alea = new Random();
-		String[] palabras=new String[valores.length+1];
+		String[] palabras=new String[valores.length];
 		int aleatorio;
 		int aleatorio1;
 		if(opcion==1){
 			if(complejidad==1){
-				for(int i=0;i<=valores.length;i++){
+				for(int i=0;i<valores.length;i++){
 					aleatorio=alea.nextInt(10);
 					valores[i]=aleatorio;
 					if(i==valores.length-1){
 						for(int k=0;k<valores.length;k++){
-							System.out.print(valores[k]);
+							System.out.println(valores[k]);
 						}
-					System.out.println();
 					}
 				}
 			}else if(complejidad==2){
-				for(int i=0;i<valores.length+1;i++){
+				for(int i=0;i<valores.length;i++){
 					aleatorio=alea.nextInt(20)+10;
 					valores[i]=aleatorio;
+					if(i==valores.length-1){
+						for(int k=0;k<valores.length;k++){
+							System.out.println(valores[k]);
+						}
+					}
 				}
 			}else{
-				int numeros=0;;
-				for(int i=0;i<valores.length+1;i++){
+				int numeros=0;
+				for(int i=0;i<valores.length;i++){
 					aleatorio1=alea.nextInt(50)+1;
 					for(int k=0;k<aleatorio1;k++){
 						numeros=numeros+aleatorio1;
-						if(k==aleatorio1){
+						if(k==aleatorio1-1){
 							valores[i]=numeros;
 						}
 					}
+					numeros=0;
 					if(i==valores.length-1){
-						for(int k=0;k<valores.length+1;k++){
-							System.out.print(valores[k]);
+						for(int k=0;k<valores.length;k++){
+							System.out.println(valores[k]);
 						}
-					System.out.println();
 					}
 				}
 			}
@@ -71,36 +75,35 @@ public class Ejercicio13{
 					aleatorio=alea.nextInt(26);
 					palabras[i]=Character.toString(letras[aleatorio]);
 					if(i==valores.length-1){
-						for(int k=0;k<valores.length+1;k++){
-							System.out.print(valores[k]);
+						for(int k=0;k<valores.length;k++){
+							System.out.println(palabras[k]);
 						}
-					System.out.println();
 					}
 				}
 			}else if(complejidad==2){
 				String palabra="";
 				String alfabeto="abcdefghijklmnñopqrstuvwxz";
 				char[]letras=alfabeto.toCharArray();
-				for(int i=0;i<valores.length+1;i++){
+				for(int i=0;i<valores.length;i++){
 					for(int k=0;k<2;k++){
 						aleatorio=alea.nextInt(26);
-						palabra=palabra+letras[k];
-						if(i==1){
+						palabra=palabra+letras[aleatorio];
+						if(k==1){
 							palabras[i]=palabra;
 						}
 					}
+					palabra="";
 					if(i==valores.length-1){
-						for(int k=0;k<valores.length+1;k++){
-							System.out.print(valores[k]);
+						for(int k=0;k<valores.length;k++){
+							System.out.println(palabras[k]);
 						}
-					System.out.println();
 					}
 				}
 			}else{
 				String palabra="";
 				String alfabeto="abcdefghijklmnñopqrstuvwxz";
 				char[]letras=alfabeto.toCharArray();
-				for(int i=0;i<valores.length+1;i++){
+				for(int i=0;i<valores.length;i++){
 					aleatorio1=alea.nextInt(50)+1;
 					for(int k=0;k<aleatorio1;k++){
 						aleatorio=alea.nextInt(26);
@@ -111,10 +114,9 @@ public class Ejercicio13{
 					}
 					palabra="";
 					if(i==palabras.length-1){
-						for(int k=0;k<valores.length+1;k++){
-							System.out.print(palabras[k]);
+						for(int k=0;k<valores.length;k++){
+							System.out.println(palabras[k]);
 						}
-					System.out.println();
 					}
 				}
 			}
