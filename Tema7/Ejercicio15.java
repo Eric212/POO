@@ -10,9 +10,9 @@ public class Ejercicio15{
 			numeros[i]=lector.nextInt();
 			k++;
 		}
-		for(int i=0;i<5;i++){
-			System.out.println(numeros[i]+" ");
-			if(i==4){
+		for(int i=0;i<numeros.length;i++){
+			System.out.print(numeros[i]+" ");
+			if(i==numeros.length-1){
 				System.out.println();
 			}
 		}
