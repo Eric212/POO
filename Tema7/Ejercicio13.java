@@ -14,6 +14,19 @@ public class Ejercicio13{
 				System.out.println();
 			}
 			k++;
+			if(i==numeros.length-1){
+				media(numeros);
+			}
+		}
+	}
+	static void media(int[] numeros){
+		int media=0;
+		for(int i=0;i<numeros.length;i++){
+			media=media+numeros[i];
+			if(i==numeros.length-1){
+				media=media/numeros.length;
+				System.out.println("Esta es la media de los valores: "+media);
+			}
 		}
 	}
 }
