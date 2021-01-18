@@ -30,20 +30,24 @@ public class Ejercicio13{
 		int aleatorio1;
 		if(opcion==1){
 			if(complejidad==1){
-				for(int i=0;i<=valores.length;i++){
+				for(int i=0;i<valores.length;i++){
 					aleatorio=alea.nextInt(10);
 					valores[i]=aleatorio;
 					if(i==valores.length-1){
 						for(int k=0;k<valores.length;k++){
-							System.out.print(valores[k]+" ");
+							System.out.println(valores[k]);
 						}
-					System.out.println();
 					}
 				}
 			}else if(complejidad==2){
 				for(int i=0;i<valores.length;i++){
 					aleatorio=alea.nextInt(20)+10;
 					valores[i]=aleatorio;
+					if(i==valores.length-1){
+						for(int k=0;k<valores.length;k++){
+							System.out.println(valores[k]);
+						}
+					}
 				}
 			}else{
 				int numeros=0;;
@@ -55,11 +59,10 @@ public class Ejercicio13{
 							valores[i]=numeros;
 						}
 					}
-					if(i==valores.length){
+					if(i==valores.length-1){
 						for(int k=0;k<valores.length;k++){
-							System.out.print(valores[k]+" ");
+							System.out.print(valores[k]);
 						}
-					System.out.println();
 					}
 				}
 			}
@@ -72,9 +75,8 @@ public class Ejercicio13{
 					palabras[i]=Character.toString(letras[aleatorio]);
 					if(i==valores.length-1){
 						for(int k=0;k<valores.length;k++){
-							System.out.print(valores[k])+" ";
+							System.out.println(valores[k]);
 						}
-					System.out.println();
 					}
 				}
 			}else if(complejidad==2){
@@ -85,15 +87,14 @@ public class Ejercicio13{
 					for(int k=0;k<2;k++){
 						aleatorio=alea.nextInt(26);
 						palabra=palabra+letras[k];
-						if(i==1){
+						if(k==1){
 							palabras[i]=palabra;
 						}
 					}
 					if(i==valores.length-1){
 						for(int k=0;k<valores.length;k++){
-							System.out.print(palabras[k]+" ");
+							System.out.println(palabras[k]);
 						}
-					System.out.println();
 					}
 				}
 			}else{
@@ -112,9 +113,8 @@ public class Ejercicio13{
 					palabra="";
 					if(i==palabras.length-1){
 						for(int k=0;k<valores.length;k++){
-							System.out.print(palabras[k]+" ");
+							System.out.println(palabras[k]);
 						}
-					System.out.println();
 					}
 				}
 			}
