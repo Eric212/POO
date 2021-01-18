@@ -50,18 +50,19 @@ public class Ejercicio13{
 					}
 				}
 			}else{
-				int numeros=0;;
+				int numeros=0;
 				for(int i=0;i<valores.length;i++){
 					aleatorio1=alea.nextInt(50)+1;
 					for(int k=0;k<aleatorio1;k++){
 						numeros=numeros+aleatorio1;
-						if(k==aleatorio1){
+						if(k==aleatorio1-1){
 							valores[i]=numeros;
 						}
 					}
+					numeros=0;
 					if(i==valores.length-1){
 						for(int k=0;k<valores.length;k++){
-							System.out.print(valores[k]);
+							System.out.println(valores[k]);
 						}
 					}
 				}
@@ -83,14 +84,15 @@ public class Ejercicio13{
 				String palabra="";
 				String alfabeto="abcdefghijklmnñopqrstuvwxz";
 				char[]letras=alfabeto.toCharArray();
-				for(int i=0;i<valores.length+1;i++){
+				for(int i=0;i<valores.length;i++){
 					for(int k=0;k<2;k++){
 						aleatorio=alea.nextInt(26);
-						palabra=palabra+letras[k];
+						palabra=palabra+letras[aleatorio];
 						if(k==1){
 							palabras[i]=palabra;
 						}
 					}
+					palabra="";
 					if(i==valores.length-1){
 						for(int k=0;k<valores.length;k++){
 							System.out.println(palabras[k]);
