@@ -7,7 +7,7 @@ public class Ejercicio13{
 		int opcion;
 		int complejidad;
 		System.out.println("Introduce cuantos valores quieres");
-		tam=lector.nextInt();
+		tam=lector.nextInt()-1;
 		System.out.println("Quiers valores numericos o alfabeticos\n1:Numericos\n2:Alfabeticos");
 		opcion=lector.nextInt();
 		while(opcion<0&&opcion>2){
@@ -25,7 +25,7 @@ public class Ejercicio13{
 	}
 	static void valorizacion(int[] valores,int opcion,int complejidad){
 		Random alea = new Random();
-		String[] palabras=new String[valores.length];
+		String[] palabras=new String[valores.length+1];
 		int aleatorio;
 		int aleatorio1;
 		if(opcion==1){
@@ -35,19 +35,19 @@ public class Ejercicio13{
 					valores[i]=aleatorio;
 					if(i==valores.length-1){
 						for(int k=0;k<valores.length;k++){
-							System.out.print(valores[k]+" ");
+							System.out.print(valores[k]);
 						}
 					System.out.println();
 					}
 				}
 			}else if(complejidad==2){
-				for(int i=0;i<valores.length;i++){
+				for(int i=0;i<valores.length+1;i++){
 					aleatorio=alea.nextInt(20)+10;
 					valores[i]=aleatorio;
 				}
 			}else{
 				int numeros=0;;
-				for(int i=0;i<valores.length;i++){
+				for(int i=0;i<valores.length+1;i++){
 					aleatorio1=alea.nextInt(50)+1;
 					for(int k=0;k<aleatorio1;k++){
 						numeros=numeros+aleatorio1;
@@ -55,9 +55,9 @@ public class Ejercicio13{
 							valores[i]=numeros;
 						}
 					}
-					if(i==valores.length){
-						for(int k=0;k<valores.length;k++){
-							System.out.print(valores[k]+" ");
+					if(i==valores.length-1){
+						for(int k=0;k<valores.length+1;k++){
+							System.out.print(valores[k]);
 						}
 					System.out.println();
 					}
@@ -71,8 +71,8 @@ public class Ejercicio13{
 					aleatorio=alea.nextInt(26);
 					palabras[i]=Character.toString(letras[aleatorio]);
 					if(i==valores.length-1){
-						for(int k=0;k<valores.length;k++){
-							System.out.print(valores[k])+" ";
+						for(int k=0;k<valores.length+1;k++){
+							System.out.print(valores[k]);
 						}
 					System.out.println();
 					}
@@ -90,8 +90,8 @@ public class Ejercicio13{
 						}
 					}
 					if(i==valores.length-1){
-						for(int k=0;k<valores.length;k++){
-							System.out.print(palabras[k]+" ");
+						for(int k=0;k<valores.length+1;k++){
+							System.out.print(valores[k]);
 						}
 					System.out.println();
 					}
@@ -111,8 +111,8 @@ public class Ejercicio13{
 					}
 					palabra="";
 					if(i==palabras.length-1){
-						for(int k=0;k<valores.length;k++){
-							System.out.print(palabras[k]+" ");
+						for(int k=0;k<valores.length+1;k++){
+							System.out.print(palabras[k]);
 						}
 					System.out.println();
 					}
