@@ -76,7 +76,7 @@ public class Ejercicio13{
 					palabras[i]=Character.toString(letras[aleatorio]);
 					if(i==valores.length-1){
 						for(int k=0;k<valores.length;k++){
-							System.out.println(valores[k]);
+							System.out.println(palabras[k]);
 						}
 					}
 				}
@@ -103,7 +103,7 @@ public class Ejercicio13{
 				String palabra="";
 				String alfabeto="abcdefghijklmnñopqrstuvwxz";
 				char[]letras=alfabeto.toCharArray();
-				for(int i=0;i<valores.length+1;i++){
+				for(int i=0;i<valores.length;i++){
 					aleatorio1=alea.nextInt(50)+1;
 					for(int k=0;k<aleatorio1;k++){
 						aleatorio=alea.nextInt(26);
