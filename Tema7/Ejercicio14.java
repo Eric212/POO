@@ -8,9 +8,14 @@ public class Ejercicio14{
 		for(int i=0;i<caracteres.length;i++){
 			System.out.println("Introduce el valor "+k);
 			caracteres[i]=lector.next().charAt(0);
-				if(k%2==0){
-					System.out.println("Valor "+k+": "+caracteres[i]);
-					System.out.println();
+			if(k%2==0){
+				System.out.println();
+				System.out.println("Valor "+k+": "+caracteres[i]+" es par");
+				System.out.println();
+			}else{
+				System.out.println();
+				System.out.println("Valor "+k+": "+caracteres[i]+" es impar");
+				System.out.println();
 			}
 			k++;
 		}
