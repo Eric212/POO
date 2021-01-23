@@ -28,11 +28,13 @@ public class Ejercicio11{
 			System.out.print(st.reverse().charAt(i));
 		}
 		System.out.println();
+		char ultima=st.reverse().charAt(0);
 		for(int i=0;i<nombreCompleto.length();i++){
-			if(nombreCompleto.charAt(i)==(st.reverse().charAt(0))){
+			if(nombreCompleto.charAt(i)==ultima){
 				contador++;
-			}else if(i==nombreCompleto.length()-1){
-				System.out.println(st.reverse().charAt(0)+" aparece "+contador+" en tu nombre completo");
+			}
+			if(i==nombreCompleto.length()-1){
+				System.out.println(ultima+" aparece "+contador+" en tu nombre completo");
 			}
 		}
 		String[] particion=nombreCompleto.split(" ");

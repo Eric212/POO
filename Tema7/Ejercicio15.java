@@ -10,12 +10,16 @@ public class Ejercicio15{
 			numeros[i]=lector.nextInt();
 			k++;
 		}
+		formato(numeros);
+	}
+	static void formato(int[] numeros){
+		int k=1;
 		for(int i=0;i<numeros.length;i++){
-			System.out.print(numeros[i]+" ");
-			if(i==numeros.length-1){
+			System.out.printf("%-10s",numeros[i]+" ");
+			if(k%4==0){
 				System.out.println();
 			}
+			k++;
 		}
-		
-	}
+	}	
 }

@@ -9,21 +9,17 @@ public class Ejercicio9{
 	}
 	static void fraseImpar(String frase){
 		String fraseImpar="";
-		int k=0;
-		String[] palabra=frase.split(" ");
-		for(int i=0;i<frase.length();i++){
-			if(i==palabra[k].length()&&k<=palabra.length){
-				k++;
-				i=0;
-				fraseImpar=fraseImpar+" ";
-			}
-			if(palabra.length==k){
-				System.out.println(fraseImpar);
-				i=frase.length();
-			}
-			if(i==0&&i!=frase.length()||i%2==0&&i!=1){
-				fraseImpar=fraseImpar+Character.toString(palabra[k].charAt(i));
-			}
-		}
+        String[] palabra=frase.split(" ");
+        for(int i=0;i<palabra.length;i++){
+		    for(int k=0;k<palabra[i].length();k++){
+			    if(k==0||k%2==0&&k!=1){
+				    fraseImpar=fraseImpar+Character.toString(palabra[i].charAt(k));
+                }
+            }
+            fraseImpar=fraseImpar+" ";
+            if(palabra.length-1==i){
+              System.out.println(fraseImpar);
+            }
+        }
 	}
 }

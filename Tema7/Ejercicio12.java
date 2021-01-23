@@ -12,13 +12,11 @@ public class Ejercicio12{
 		System.out.println(remplazada);
 	}
 	static String remplazarLetras(String frase){
-		String remplazada;
-		remplazada=frase.replaceAll("es", "no por");
-		return remplazada;
+		frase=frase.replaceAll("es", "no por");
+		return frase;
 	}
 	static String remplazarNumeros(String frase){
-		String remplazada;
-		remplazada=frase.replaceAll("\\d+", "*");
-		return remplazada;
+		frase=frase.replaceAll("\\d+", "*");
+		return frase;
 	}
 }
