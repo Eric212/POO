@@ -6,7 +6,7 @@ public class Ejercicio1{
 		String convertida;
 		System.out.println("Introduce una frase");
 		frase=lector.nextLine();
-		convertida=PrimeraMayuscula(frase);
+		convertida=primeraMayuscula(frase);
 		System.out.println("Frase Original= "+frase+"\nFrase Convertida= "+convertida);
 	}
 	static String primeraMayuscula(String frase){

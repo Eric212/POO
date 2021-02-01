@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 public class Ejercicio16{
 	public static void main(String[] args) {
-		Scanner lector = new Scanner(System.in);
+		//Scanner lector = new Scanner(System.in);
 		//System.out.println("Introduce el numero de notas que quieres sacar");
 		int notas=30;	//lector.nextInt();
 		double[] calificaciones=new double[notas];
@@ -12,9 +12,8 @@ public class Ejercicio16{
 	static double[] secuencia(int notas){
 		Random aleatorio=new Random();
 		double[] calificaciones=new double[notas];
-		double calificacion;
 		for(int i=0;i<notas;i++){
-			calificaciones[i]=calificacion=aleatorio.nextDouble()*10;
+			calificaciones[i]=aleatorio.nextDouble()*10;
 		}
 		return calificaciones;
 	}

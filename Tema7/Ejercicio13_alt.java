@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.Random;
-public class Ejercicio13{
+public class Ejercicio13_alt{
 	public static void main(String[] args) {
 		Scanner lector = new Scanner(System.in);
 		int tam;

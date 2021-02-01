@@ -8,7 +8,12 @@ public class Ejercicio14{
 		for(int i=0;i<caracteres.length;i++){
 			System.out.println("Introduce el valor "+k);
 			caracteres[i]=lector.next().charAt(0);
-			if(k%2==0){
+		}
+		parImpar(caracteres,k);
+	}
+	static void parImpar(char[] caracteres,int k){
+		for(int i=0;i<caracteres.length;i++){
+			if(k%2==0&&i!=0){
 				System.out.println();
 				System.out.println("Valor "+k+": "+caracteres[i]+" es par");
 				System.out.println();
@@ -17,7 +22,7 @@ public class Ejercicio14{
 				System.out.println("Valor "+k+": "+caracteres[i]+" es impar");
 				System.out.println();
 			}
-			k++;
 		}
+		k++;
 	}
 }
