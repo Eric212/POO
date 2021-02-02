@@ -1,5 +1,4 @@
 import java.util.Random;
-import java.util.Arrays;
 public class Ejercicio22{
 	public static void main(String[] args){
 		Random alea = new Random();
@@ -44,6 +43,6 @@ public class Ejercicio22{
             }
         }
         int[] s=getSliceOfArray(p,izq+1,p.length);
-         	return s;
+        return s;
     }
 }
