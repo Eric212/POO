@@ -9,14 +9,21 @@ public class Ejercicio22{
 		filtrado(p);
 	}
 	static void filtrado(int[] p){
-		int[] s=quicksort(p,0,p.length-1);
+		int[] s=new int[p.length];
 		int k=1;
 		for(int i=0;i<s.length;i++){
-			System.out.print("Valor "+k+":\t"+s[i]+"\n");
+			if(p[i]>=10){
+				s[i]=p[i];
+				System.out.print("Valor "+k+":\t"+s[i]+"\n");
+			}else{
+				s[i]=-1;
+				System.out.print("Valor "+k+":\t"+s[i]+"\n");
+			}
 			k++;
 		}
     }
-    public static int[] getSliceOfArray(int[] p,int start, int end){
+}
+    /*public static int[] getSliceOfArray(int[] p,int start, int end){
          int[] s= new int[end-start]; 
          for (int i =0;i<s.length;i++){ 
             s[i]= p[start+i]; 
@@ -45,4 +52,4 @@ public class Ejercicio22{
         int[] s=getSliceOfArray(p,izq+1,p.length);
         return s;
     }
-}
+}*/
