@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.Random;
-public class Ejercicio26{
+public class Ejercicio26_alt{
 	public static void main(String[] args) {
 		Random alea = new Random();
 		int[][] matriz=new int[4][8];
@@ -194,9 +194,8 @@ public class Ejercicio26{
 		System.out.println("/////////////////////////////////////////////////////////");
 	}
 	public static void visualizarColum8(int[][] matriz,int[][] reves){
-		int[][] suma=new int[matriz[0].length+1][matriz.length];
+		int[][] suma=new int[matriz[0].length][matriz.length+1];
 		int sumatorio=0;
-		int l=0;
 		for(int i=0;i<matriz.length;i++){
 			for(int j=0;j<matriz[i].length;j++){
 				suma[j][i]=matriz[i][j];
@@ -205,18 +204,15 @@ public class Ejercicio26{
 		for(int i=0;i<reves.length;i++){
 			for(int j=0;j<reves[i].length;j++){
 				sumatorio+=reves[i][j];
-				if(i==reves.length-1){
-					l++;
-				}
 				if(j==reves[i].length-1){
-					suma[suma.length-1][l]=sumatorio;
+					suma[i][j+1]=sumatorio;
 					sumatorio=0;
 				}
 			}
 		}
 		for(int i=0;i<suma[0].length;i++){
 			for(int j=0;j<suma.length;j++){
-				if(j==suma.length-1){
+				if(i==suma[i].length-1){
 					System.out.print("Total : "+suma[j][i]+"\t");
 				}else{
 					System.out.print(suma[j][i]+"\t\t");
