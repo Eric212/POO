@@ -32,10 +32,9 @@ public class Ejercicio21 {
 			}else if(opcion>1&&comprobante==false){
 				System.out.println("La array no esta llena, primero rellene la array");
 				menu(p,comprobante);
-			}else{
-				System.out.println("-------------FIN DEL PROGRAMA--------------");
 			}
 		}
+			System.out.println("-------------FIN DEL PROGRAMA--------------");
 	}
     public static void control(int opcion,int[] numeros){
     	switch(opcion){
@@ -75,9 +74,11 @@ public class Ejercicio21 {
 	public static void visualizarParell(int[] vector){//muestra la posición y el contenido de los elementos que tienen valor par.
 		boolean comprobante;
 		comprobante=true;
-		for(int i=0;i<vector.length;i=i+2){
+		for(int i=0;i<vector.length;i++){
+			if(vector[i]%2==0){
 				System.out.println("Posicion "+i+"="+vector[i]);
-			}				
+			}
+		}				
 		System.out.println();
 		menu(vector,comprobante);
 	}
@@ -86,7 +87,7 @@ public class Ejercicio21 {
 		comprobante=true;
 		for(int i=0;i<vector.length;i++){
 			if(vector[i]%3==0){
-				System.out.print("Posicion "+i+"="+vector[i]+"\t");
+				System.out.println("Posicion "+i+"="+vector[i]+"\t");
 			}
 		}
 		System.out.println();

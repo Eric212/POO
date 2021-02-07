@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Random;
 public class Ejercicio13{
 	public static void main(String[] args) {
 		Scanner lector = new Scanner(System.in);

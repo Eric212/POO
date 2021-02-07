@@ -1,10 +1,7 @@
 import java.util.Random;
-import java.util.Scanner;
 public class Ejercicio16{
 	public static void main(String[] args) {
-		//Scanner lector = new Scanner(System.in);
-		//System.out.println("Introduce el numero de notas que quieres sacar");
-		int notas=30;	//lector.nextInt();
+		int notas=30;
 		double[] calificaciones=new double[notas];
 		calificaciones=secuencia(notas);
 		media(calificaciones);

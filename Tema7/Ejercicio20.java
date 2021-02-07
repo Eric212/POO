@@ -13,7 +13,7 @@ public class Ejercicio20 {
 		System.out.println("Que numero buscas");
         tam=lector.nextInt();
         for(int i=0;i<numeros.length;i++){
-            comodin=aleatorio.nextInt(3);
+            comodin=aleatorio.nextInt(tam-0+1);
             numeros[i]=comodin;
         }
         comprobante=ordenarQuicksort(numeros,tam);
@@ -30,8 +30,6 @@ public class Ejercicio20 {
         for(int i=0;i<numeros.length;i++){
             if(tam==numeros[i]){
                 comprobante=true;
-            }else{
-                comprobante=false;
             }
             if(i==numeros.length-1){
                 return comprobante;

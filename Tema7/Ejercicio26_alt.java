@@ -191,7 +191,7 @@ public class Ejercicio26_alt{
 			}
 		}
 		while(opcion!=0);
-		System.out.println("/////////////////////////////////////////////////////////");
+		System.out.println("/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
 	}
 	public static void visualizarColum8(int[][] matriz,int[][] reves){
 		int[][] suma=new int[matriz[0].length][matriz.length+1];

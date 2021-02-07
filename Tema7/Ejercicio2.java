@@ -10,6 +10,7 @@ public class Ejercicio2{
 	static void vocalesConsonantes(String frase){
 		int consonantes=0;
 		int vocales=0;
+		String fraseOriginal=frase;
 		frase=frase.toLowerCase();
 		for(int i=0;i<frase.length();i++){
 			if(Character.toString(frase.charAt(i)).compareTo("a")<0){
@@ -21,6 +22,6 @@ public class Ejercicio2{
 				}
 			}
 		}
-		System.out.println("La frase=\""+frase+"\" contiene "+vocales+" vocales y "+consonantes+" consonantes");
+		System.out.println("La frase=\""+fraseOriginal+"\" contiene "+vocales+" vocales y "+consonantes+" consonantes");
 	}
 }

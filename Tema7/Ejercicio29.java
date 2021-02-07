@@ -5,14 +5,12 @@ public class Ejercicio29{
 		Scanner lector = new Scanner(System.in);
 		Random alea = new Random();
 		int comp=-1;
-		int alumnos,modulos,aprobados;
+		int alumnos,aprobados;
 		float media=0;
 		System.out.print("Introduce el numero de alumnos\nAlumnos: ");
 		alumnos=lector.nextInt();
 		System.out.println();
-		System.out.print("Introduce el numero de Modulos\nModulos: ");
-		modulos=lector.nextInt();
-		float[][] alumno=new float[alumnos+2][modulos];
+		float[][] alumno=new float[alumnos+2][4];
 		for(int i=0;i<alumno.length;i++){
 			for(int j=0;j<alumno[i].length;j++){
 				alumno[i][j]=alea.nextFloat()*10;
@@ -37,13 +35,13 @@ public class Ejercicio29{
 					if(i<9&&alumno.length>10){
 						System.out.printf("Alumno 0"+(i+1)+"%20.2f\t",alumno[i][j]);
 					}else if(i==alumno.length-2&&i>alumno.length-3){
-						System.out.println("--------------------------------------------------------------------------------------------------------");
+						System.out.println("-----------------------------------------------------------------------------------------------------------");
 						alumno[i][j]=mayor(alumno,j);
 						System.out.printf("Nota  maxima "+"%16.2f\t",alumno[i][j]);
 					}else if(i==alumno.length-1&&i>alumno.length-3){
 						alumno[i][j]=mediaModulo(alumno,j);
 						aprobados=aprobados(alumno[i][j],alumno,j);
-						System.out.printf("Media ("+(alumno.length-2)+" Alumnos) "+"%10.2f(%1d)\t",alumno[i][j],aprobados);
+						System.out.printf("Media ("+(alumno.length-2)+" Alumnos) "+"%10.2f(%d)",alumno[i][j],aprobados);
 					}else{
 						System.out.printf("Alumno "+(i+1)+"%20.2f\t",alumno[i][j]);
 					}
@@ -54,7 +52,7 @@ public class Ejercicio29{
 					}else if(i==alumno.length-1&&i>alumno.length-3){
 						alumno[i][j]=mediaModulo(alumno,j);
 						aprobados=aprobados(alumno[i][j],alumno,j);
-						System.out.printf("%12.2f(%1d)\t",alumno[i][j],aprobados);
+						System.out.printf("%20.2f(%d)",alumno[i][j],aprobados);
 					}else{
 						System.out.printf("%20.2f\t",alumno[i][j]);
 					}

@@ -25,7 +25,7 @@ public class Ejercicio17{
 		media=media/alturas.length;
 		for(int i=0;i<alturas.length;i++){
 			if(alturas[i]>media){
-				System.out.println("La altura "+k+": "+alturas[i]+" es mayor a la media: "+media);
+				System.out.printf("La altura "+k+": "+"%.2f"+" es mayor a la media: "+"%.2f",alturas[i],media);
 			}
 			k++;
 		}

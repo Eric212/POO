@@ -16,7 +16,7 @@ public class Ejercicio10{
 	static boolean palindromo(String palabra){
 		StringBuilder sB=new StringBuilder(palabra);
 		boolean palindromo;
-		if(sB.reverse().equals(palabra)){
+		if(sB.reverse().toString().equals(palabra)){
 			palindromo=true;
 			return palindromo;
 		}else{
