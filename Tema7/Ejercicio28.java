@@ -8,10 +8,10 @@ public class Ejercicio28{
 		String[] letras=new String[500];
 		for(int i=0;i<letras.length;i++){
 			if(i<letra.length){
-				letra[i]=Character.toString((char)caracter).toUpperCase();
+				letra[i]=Character.toString((char)caracter);
 				caracter++;
 			}
-			letras[i]=Character.toString((char)alea.nextInt(90-65+1)+65).toUpperCase();
+			letras[i]=Character.toString((char)alea.nextInt(90-65+1)+65);
 		}
 		for(int i=0;i<letra.length;i++){
 			con=0;

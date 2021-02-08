@@ -87,7 +87,7 @@ public class Ejercicio16{
 				aleatorio=dado.nextInt(10)+1;
 				while(turno==1&&cpu<11){
 						if(aleatorio>5){
-							while(cpu<jugador){//Bucle infinito si jugador tiene 11 (!!!ARREGLAR¡¡¡¡)
+							while(cpu<jugador&&jugador<11){//Bucle infinito si jugador tiene 11 (!!!ARREGLAR¡¡¡¡)
 								cpu=jugador+aleatorio;
 								turno=2;
 								if(cpu>11){

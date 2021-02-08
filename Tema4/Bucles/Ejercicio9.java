@@ -7,7 +7,6 @@ public class Ejercicio9{
 		lector.nextLine();
 		int x=0;
 		int contador;
-		int resultado;
 		for(contador=1;contador<=numero;contador++){
 			if(numero%contador==0){
 				x++;
