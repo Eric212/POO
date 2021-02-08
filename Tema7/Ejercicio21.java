@@ -1,13 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 public class Ejercicio21 {
-    public static void main(String[] args){
-    	Random alea = new Random();
-    	int comodin=alea.nextInt(51);
-		int[] numeros=new int[comodin];
-		boolean comprobante=false;
-		menu(numeros,comprobante);
-    }
+
     public static void menu(int[] p,boolean comprobante){
 		Scanner lector = new Scanner(System.in);
 		int opcion;
@@ -35,6 +29,9 @@ public class Ejercicio21 {
 			}
 		}
 			System.out.println("-------------FIN DEL PROGRAMA--------------");
+			if(opcion==0){
+				lector.close();
+			}
 	}
     public static void control(int opcion,int[] numeros){
     	switch(opcion){
@@ -93,4 +90,11 @@ public class Ejercicio21 {
 		System.out.println();
 		menu(vector,comprobante);
 	}
+	public static void main(String[] args){
+    	Random alea = new Random();
+    	int comodin=alea.nextInt(51);
+		int[] numeros=new int[comodin];
+		boolean comprobante=false;
+		menu(numeros,comprobante);
+    }
 }
