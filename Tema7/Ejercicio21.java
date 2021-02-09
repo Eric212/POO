@@ -1,21 +1,29 @@
 import java.util.Scanner;
 import java.util.Random;
 public class Ejercicio21 {
-
+	public static void main(String[] args){
+    	Random alea = new Random();
+    	int comodin=alea.nextInt(51);
+		int[] numeros=new int[comodin];
+		boolean comprobante=false;
+		menu(numeros,comprobante);
+    }
     public static void menu(int[] p,boolean comprobante){
 		Scanner lector = new Scanner(System.in);
 		int opcion;
-		System.out.println();
-		System.out.print("MENÚ PRINCIPAL\n==============\n1.-Rellenar array.\n2.-Visualizar contenido del array\n3.-Visualizar contenido par.\n4.-Visualizar contenido múltiplo de 3\n0.-Salir del menú.\nSelecciona una opción: ");
-		opcion=lector.nextInt();
-		while(opcion<0||opcion>4){
+		do{
 			System.out.println();
-			System.out.print("Introduce una opcicon valida entre 0 y 4\nSelecciona una opción: ");
+			System.out.print("MENÚ PRINCIPAL\n==============\n1.-Rellenar array.\n2.-Visualizar contenido del array\n3.-Visualizar contenido par.\n4.-Visualizar contenido múltiplo de 3\n0.-Salir del menú.\nSelecciona una opción: ");
 			opcion=lector.nextInt();
+			lector.nextLine();
+			while(opcion<0||opcion>4){
+				System.out.println();
+				System.out.print("Introduce una opcicon valida entre 0 y 4\nSelecciona una opción: ");
+				opcion=lector.nextInt();
+				lector.nextLine();
+				System.out.println();
+			}
 			System.out.println();
-		}
-		System.out.println();
-		while(opcion!=0){
 			if(opcion==1&&comprobante==true){
 				comprobante=false;
 			}
@@ -27,11 +35,8 @@ public class Ejercicio21 {
 				System.out.println("La array no esta llena, primero rellene la array");
 				menu(p,comprobante);
 			}
-		}
+		}while(opcion!=0);
 			System.out.println("-------------FIN DEL PROGRAMA--------------");
-			if(opcion==0){
-				lector.close();
-			}
 	}
     public static void control(int opcion,int[] numeros){
     	switch(opcion){
@@ -90,11 +95,4 @@ public class Ejercicio21 {
 		System.out.println();
 		menu(vector,comprobante);
 	}
-	public static void main(String[] args){
-    	Random alea = new Random();
-    	int comodin=alea.nextInt(51);
-		int[] numeros=new int[comodin];
-		boolean comprobante=false;
-		menu(numeros,comprobante);
-    }
 }
