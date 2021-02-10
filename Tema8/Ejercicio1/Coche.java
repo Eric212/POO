@@ -1,7 +1,4 @@
 package Ejercicio1;
-
-import java.sql.Date;
-
 public class Coche {
     private String modelo,color,matricula,tipoCoche,aFabricacion,modSeguro;
     private boolean metalizado;
@@ -10,7 +7,7 @@ public class Coche {
         modelo="Focus";
         color="Negro";
         metalizado=true;
-        matricula="DHJ3639";
+        matricula="2639DHJ";
         tipoCoche="Deportivo";
         aFabricacion="15/03/2005";
         modSeguro="Terceros";
@@ -37,38 +34,38 @@ public class Coche {
     public String getModelo(){
         return this.modelo;
     }
-    public String setColor(String color){
-        return this.color=color;
+    public void setColor(String color){
+        this.color=color;
     }
     public String getColor(){
         return this.color;
     }
-    public boolean setMetalizado(boolean metalizado){
-        return this.metalizado=metalizado;
+    public void setMetalizado(boolean metalizado){
+        this.metalizado=metalizado;
     }
     public boolean getMetalizadoo(){
         return metalizado;
     }
-    public String setMatricula(String matricula){
-        return this.matricula=matricula;
+    public void setMatricula(String matricula){
+        this.matricula=matricula;
     }
     public String getMatricula(){
         return this.matricula;
     }
-    public String setTipoCoche(String tipoCoche){
-        return this.tipoCoche=tipoCoche;
+    public void setTipoCoche(String tipoCoche){
+        this.tipoCoche=tipoCoche;
     }
     public String getTipoCoche(){
         return this.tipoCoche;
     }
-    public String setAFabricacion(String aFabricacion){
-        return this.aFabricacion=aFabricacion;
+    public void setAFabricacion(String aFabricacion){
+        this.aFabricacion=aFabricacion;
     }
     public String getAFabricacion(){
         return this.aFabricacion;
     }
-    public String setModSeguro(String modSeguro){
-        return this.modSeguro=modSeguro;
+    public void setModSeguro(String modSeguro){
+        this.modSeguro=modSeguro;
     }
     public String getModSeguro(){
         return this.modSeguro;
