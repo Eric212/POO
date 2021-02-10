@@ -1,4 +1,7 @@
 package Ejercicio1;
+
+import java.sql.Date;
+
 public class Coche {
     private String modelo,color,matricula,tipoCoche,aFabricacion,modSeguro;
     private boolean metalizado;
@@ -12,7 +15,7 @@ public class Coche {
         aFabricacion="15/03/2005";
         modSeguro="Terceros";
     }
-    public Coche(String modelo,String color,String matricula,String tipoCoche,String aFabricacion,String modSeguro,boolean metalizado){
+    public Coche(String modelo,String tipoCoche,String color,boolean metalizado,String matricula,String aFabricacion,String modSeguro){
         this.modelo=modelo;
         this.color=color;
         this.metalizado=metalizado;
@@ -21,8 +24,15 @@ public class Coche {
         this.aFabricacion=aFabricacion;
         this.modSeguro=modSeguro;
     }
-    public String setModelo(String modelo){
-        return this.modelo=modelo;
+    public Coche(String modelo,String color,String tipoCoche,String aFabricacion,boolean metalizado){
+        this.modelo=modelo;
+        this.color=color;
+        this.metalizado=metalizado;
+        this.tipoCoche=tipoCoche;
+        this.aFabricacion=aFabricacion;
+    }
+    public void setModelo(String modelo){
+        this.modelo=modelo;
     }
     public String getModelo(){
         return this.modelo;

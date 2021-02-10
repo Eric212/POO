@@ -3,7 +3,7 @@ import java.util.Random;
 public class EjercicioPiedraPapelTijeras {
     public static int puntuacionJugador=0;
     public static int puntuacionCpu=0;
-    public static int empate;
+    public static int empate=0;
     public static Scanner lector=new Scanner(System.in);
     public static void main(String[] args) {
         menu();
