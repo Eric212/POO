@@ -88,6 +88,7 @@ public class Principal{
                     if(opcion!=0){
                     System.out.println("\nPulse Intro para volver al menu");
                     lector.nextLine();
+                    System.out.print("\u001B[H\u001B[2J");
                     }
                 }
                 opcion=4;
