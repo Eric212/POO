@@ -39,10 +39,12 @@ public class Principal{
                 System.out.print("Color: ");
                 coche2.setColor(lector.nextLine());
                 System.out.print("Metalizado Si / No: ");
-                if(lector.nextLine().equalsIgnoreCase("Si")){
-                    coche2.setMetalizado(true);
-                }else{
-                    coche2.setMetalizado(false);
+                while(!lector.nextLine().equalsIgnoreCase("si")&&!lector.nextLine().equalsIgnoreCase("no")){
+                    if(lector.nextLine().equalsIgnoreCase("Si")){
+                        coche2.setMetalizado(true);
+                    }else{
+                        coche2.setMetalizado(false);
+                    }
                 }
                 System.out.print("Matricula: ");
                 coche2.setMatricula(lector.nextLine());
@@ -60,10 +62,12 @@ public class Principal{
                 System.out.print("Color: ");
                 coche3.setColor(lector.nextLine());
                 System.out.print("Metalizado Si / No: ");
-                if(lector.nextLine().equalsIgnoreCase("Si")){
-                    coche3.setMetalizado(true);
-                }else{
-                    coche3.setMetalizado(false);
+                while(!lector.nextLine().equalsIgnoreCase("si")&&!lector.nextLine().equalsIgnoreCase("no")){
+                    if(lector.nextLine().equalsIgnoreCase("Si")){
+                        coche2.setMetalizado(true);
+                    }else{
+                        coche2.setMetalizado(false);
+                    }
                 }
                 System.out.print("Año de fabricacion: ");
                 coche3.setAFabricacion(lector.nextLine());
