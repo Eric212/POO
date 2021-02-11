@@ -16,4 +16,13 @@ public class Asignaturas {
     public void setCodigoAsig(int codigoAsig){
         this.codigoAsig=codigoAsig;
     }
+    public int getCodigoAsig(){
+        return this.codigoAsig;
+    }
+    public void setCurso(int curso){
+        this.curso=curso;
+    }
+    public String imprimirAsignaturas(){
+        return "Asignatura: "+this.nombre+"\nCodigo Asignatura: "+this.codigoAsig+"\nCurso: "+this.curso;
+    }
 }
