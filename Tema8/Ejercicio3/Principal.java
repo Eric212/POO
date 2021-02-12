@@ -47,11 +47,11 @@ public class Principal {
                 for(int j=0;j<conversion.length;j++){
                     fecha[j]=Integer.parseInt(conversion[j]);
                 }
-                fechaNacimiento=new GregorianCalendar(fecha[2],fecha[1],fecha[0]);
+                fechaNacimiento=new GregorianCalendar(fecha[2],fecha[1]-1,fecha[0]);
                 alumnos[i].setFechaNacimiento(fechaNacimiento);
                 alumnos[i]=alumno;
                 System.out.print("\nGrupo al que pertenece el alumno: ");
-                alumnos[i].setGrupo(lector.nextLine());
+                alumnos[i].setGrupo(lector.nextLine().toUpperCase());
                 System.out.print("\nTelefono del alumno: ");
                 alumnos[i].setTelefono(lector.nextInt());
                 lector.nextLine();
@@ -61,16 +61,35 @@ public class Principal {
                 lector.nextLine();
                 for(int j=0;j<alumnos.length;j++){
                     if(alumnos[j].getNia()==comprobante){
-                        System.out.print("Nia: "+alumnos[j].getNia()+"\nNombre: "+alumnos[j].getNombre()+"\nApellidos: "+alumnos[j].getApellidos()+"\nFecha de nacimiento: "+alumnos[j].getFechaNacimiento()+"\nGrupo: "+alumnos[j].getGrupo()+"\nTelefono: "+alumnos[j].getTelefono());
+                        System.out.print("Nia: "+alumnos[j].getNia()+"\nNombre: "+alumnos[j].getNombre()+"\nApellidos: "+alumnos[j].getApellidos()+"\nFecha de nacimiento: "+alumnos[j].getFechaNacimiento().getTime()+"\nGrupo: "+alumnos[j].getGrupo()+"\nTelefono: "+alumnos[j].getTelefono());
                         System.out.println();
                         System.out.print("Desea borrar este alumno: Si/No: ");
                         decision=lector.nextLine();
+                        lector.nextLine();
                         while(!decision.equalsIgnoreCase("si")&&!decision.equalsIgnoreCase("no")){
+                            decision=lector.nextLine();
+                            lector.nextLine();
                             if(decision.equalsIgnoreCase("Si")){
                                 alumnos[j]=null;
                             }
                         }
                         break;
+                    }
+                }
+            }else if(opcion==3){
+                System.out.print("**********************\n****CONSULTAS****\n**********************\n1.Por grupo ...\n2.Por edad ...\n3.Por nia ...\nPor apellidos\n-----------------------------------\n0.Volver al menu principal\nOpcion: ");
+                opcion=lector.nextInt();
+                lector.nextLine();
+                if(opcion==1){
+                    System.out.print("Eliga el grupo que desee mostrar\nGrupo: ");
+                    decision=lector.nextLine();
+                    System.out.printf("%-1s"+"%10s"+"%20s"+"%30s"+"%10s"+"%20s\n","NIA","Nombre","Apellidos","Fecha de nacimiento","Grupo","Teléfono");
+                    System.out.println("---------------------------------------------------------------------------------------------------------------");
+                    for(int j=0;j<alumnos.length;j++){
+                        if(alumnos[j].getGrupo().equals(decision)){
+                            System.out.printf("%d\t"+"%2s\t"+"%2s\t"+"%tD\t"+"%2s\t"+"%2ds\t",alumnos[j].getNia(),alumnos[j].getNombre(),alumnos[j].getApellidos(),alumnos[j].getFechaNacimiento().getTime(),alumnos[j].getGrupo(),alumnos[j].getTelefono());
+                            System.out.println();
+                        }
                     }
                 }
             }
