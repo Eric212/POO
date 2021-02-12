@@ -7,6 +7,14 @@ public class Alumnos {
     private String apellidos;
     private String grupo;
     private GregorianCalendar fechaNacimiento;
+    public Alumnos(){
+        this.nia=12345;
+        this.nombre="Eric";
+        this.apellidos="Sospedra Salort";
+        this.fechaNacimiento=new GregorianCalendar(1996,03,15);
+        this.telefono=644196907;
+        this.grupo="1 DAW";
+    }
     public Alumnos(int nia,String nombre,String primerApellido1,String segundoApellido,int telefono,String grupo){
         this.nia=nia;
         this.nombre=nombre;

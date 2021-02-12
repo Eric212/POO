@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Principal {
     static Scanner lector=new Scanner(System.in);
     static Alumnos[] alumnos;
+    static Alumnos alumnoPre=new Alumnos();
     static Alumnos alumno=new Alumnos(0,null, null, null, 0, null);
     static GregorianCalendar fechaNacimiento;
     public static void main(String[] args) {
@@ -27,34 +28,41 @@ public class Principal {
                 lector.nextLine();
             }
             if(opcion==1){
-                alumnos[i]=alumno;
-                System.out.print("------------Datos Alumno------------\nNia del alumno: ");
-                comprobante=lector.nextInt();
-                lector.nextLine();
-                while(alumnos[i].getNia()==comprobante){
-                    System.out.print("Introduce un NIA valido, este ya pertenece a un alumno\nNIA: ");
-                    alumnos[i].setNia(lector.nextInt());
+                if(i<alumnos.length){
+                    alumnos[i]=alumno;
+                    System.out.print("------------Datos Alumno------------\nNia del alumno: ");
+                    comprobante=lector.nextInt();
                     lector.nextLine();
+                    while(alumnos[i].getNia()==comprobante){
+                        System.out.print("Introduce un NIA valido, este ya pertenece a un alumno\nNIA: ");
+                        alumnos[i].setNia(lector.nextInt());
+                        lector.nextLine();
+                    }
+                    alumnos[i].setNia(comprobante);
+                    System.out.print("\nNombre del alumno(Sin apellidos): ");
+                    alumnos[i].setNombre(lector.nextLine());
+                    System.out.print("\nApellidos del alumno: ");
+                    alumnos[i].setApellidos(lector.nextLine());
+                    System.out.print("\nFecha de nacimiento del alumno (dd/mm/yyyy): ");
+                    conversion=lector.nextLine().split("/");
+                    fecha=new int[conversion.length];
+                    for(int j=0;j<conversion.length;j++){
+                        fecha[j]=Integer.parseInt(conversion[j]);
+                    }
+                    fechaNacimiento=new GregorianCalendar(fecha[2],fecha[1]-1,fecha[0]);
+                    alumnos[i].setFechaNacimiento(fechaNacimiento);
+                    alumnos[i]=alumno;
+                    System.out.print("\nGrupo al que pertenece el alumno: ");
+                    alumnos[i].setGrupo(lector.nextLine().toUpperCase().trim());
+                    System.out.print("\nTelefono del alumno: ");
+                    alumnos[i].setTelefono(lector.nextInt());
+                    lector.nextLine();
+                    i++;
+                }else{
+                    System.out.println("No puedes introducir mas alumnos, tu lista solo dispone de espacio para "+alumnos.length+" Alumnos\nDesea hacer mas grande su lista de alumnos: SI/No");
+                    
+
                 }
-                alumnos[i].setNia(comprobante);
-                System.out.print("\nNombre del alumno(Sin apellidos): ");
-                alumnos[i].setNombre(lector.nextLine());
-                System.out.print("\nApellidos del alumno: ");
-                alumnos[i].setApellidos(lector.nextLine());
-                System.out.print("\nFecha de nacimiento del alumno (dd/mm/yyyy): ");
-                conversion=lector.nextLine().split("/");
-                fecha=new int[conversion.length];
-                for(int j=0;j<conversion.length;j++){
-                    fecha[j]=Integer.parseInt(conversion[j]);
-                }
-                fechaNacimiento=new GregorianCalendar(fecha[2],fecha[1]-1,fecha[0]);
-                alumnos[i].setFechaNacimiento(fechaNacimiento);
-                alumnos[i]=alumno;
-                System.out.print("\nGrupo al que pertenece el alumno: ");
-                alumnos[i].setGrupo(lector.nextLine().toUpperCase());
-                System.out.print("\nTelefono del alumno: ");
-                alumnos[i].setTelefono(lector.nextInt());
-                lector.nextLine();
             }else if(opcion==2){
                 System.out.print("------------Baja Alumnos------------\nNia del alumno que se desea dar de baja: ");
                 comprobante=lector.nextInt();
@@ -82,12 +90,12 @@ public class Principal {
                 lector.nextLine();
                 if(opcion==1){
                     System.out.print("Eliga el grupo que desee mostrar\nGrupo: ");
-                    decision=lector.nextLine();
-                    System.out.printf("%-1s"+"%10s"+"%20s"+"%30s"+"%10s"+"%20s\n","NIA","Nombre","Apellidos","Fecha de nacimiento","Grupo","Teléfono");
+                    decision=lector.nextLine().trim();
+                    System.out.printf("%9s"+"%15s"+"%20s"+"%30s"+"%15s"+"%20s\n","NIA","Nombre","Apellidos","Fecha de nacimiento","Grupo","Teléfono");
                     System.out.println("---------------------------------------------------------------------------------------------------------------");
                     for(int j=0;j<alumnos.length;j++){
-                        if(alumnos[j].getGrupo().equals(decision)){
-                            System.out.printf("%d\t"+"%2s\t"+"%2s\t"+"%tD\t"+"%2s\t"+"%2ds\t",alumnos[j].getNia(),alumnos[j].getNombre(),alumnos[j].getApellidos(),alumnos[j].getFechaNacimiento().getTime(),alumnos[j].getGrupo(),alumnos[j].getTelefono());
+                        if(alumnos[j].getGrupo().equalsIgnoreCase(decision)){
+                            System.out.printf("%10d"+"%13s"+"%24s"+"%21tD"+"%21s"+"%21d\n",alumnos[j].getNia(),alumnos[j].getNombre(),alumnos[j].getApellidos(),alumnos[j].getFechaNacimiento().getTime(),alumnos[j].getGrupo(),alumnos[j].getTelefono());
                             System.out.println();
                         }
                     }
