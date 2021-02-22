@@ -1,5 +1,5 @@
 package Ejercicio2;
-public class Principal {
+public class PrincipalAsignaturas {
     static Asignaturas asignatura1=new Asignaturas("Programacion", 1007, 1);
     static Asignaturas asignatura2=new Asignaturas("Sistemas", 1010, 1);
     static Asignaturas asignatura3=new Asignaturas("Lenguaje de Marcas", 1001, 2);

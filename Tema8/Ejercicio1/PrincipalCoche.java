@@ -1,6 +1,6 @@
 package Ejercicio1;
 import java.util.Scanner;
-public class Principal{
+public class PrincipalCoche{
     static Scanner lector=new Scanner(System.in);
     static Coche coche1=new Coche();
     static Coche coche2=new Coche("","","",false,"","","");

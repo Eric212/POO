@@ -1,19 +1,17 @@
 package Ejercicio3;
 import java.util.GregorianCalendar;
 public class Alumnos {
-    private int nia;
-    private int telefono;
-    private String nombre;
-    private String apellidos;
-    private String grupo;
+    private int nia,edad,telefono;
+    private String nombre,apellidos,grupo;
     private GregorianCalendar fechaNacimiento;
-    public Alumnos(int nia,String nombre,String primerApellido1,String segundoApellido,int telefono,String grupo){
+    public Alumnos(int nia,String nombre,String primerApellido1,String segundoApellido,int telefono,String grupo,int edad){
         this.nia=nia;
         this.nombre=nombre;
         this.apellidos=primerApellido1+" "+segundoApellido;
         this.fechaNacimiento=new GregorianCalendar();
         this.telefono=telefono;
         this.grupo=grupo;
+        this.edad=edad;
     }
     public int getNia() {
         return this.nia;
@@ -61,5 +59,11 @@ public class Alumnos {
 
     public void setFechaNacimiento(GregorianCalendar fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
+    }
+    public int getEdad(){
+        return this.edad;
+    }
+    public void setEdad(int edad){
+        this.edad=edad;
     }
 }
