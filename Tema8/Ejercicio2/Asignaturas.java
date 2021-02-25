@@ -23,6 +23,6 @@ public class Asignaturas {
         this.curso=curso;
     }
     public String imprimirAsignaturas(){
-        return "Asignatura: "+this.nombre+"\nCodigo Asignatura: "+this.codigoAsig+"\nCurso: "+this.curso;
+        return "Asignatura: "+nombre+"\nCodigo Asignatura: "+codigoAsig+"\nCurso: "+curso;
     }
 }

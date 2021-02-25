@@ -132,13 +132,32 @@ public class PrincipalAlumno{
                     alumnos[j]=null;
                     i--;
                     numAlum--;
+                    for(int k=0;k<alumnos.length;k++){
+                        if(numAlum==i){
+                            break;
+                        }else if(alumnos[k]==null){
+                            alumnos[k]=alumnos[k+1];
+                            alumnos[k+1]=null;
+                        }else{
+                            numAlum++;
+                        }
+                    }
                     break;
                 }
             }
         }
     }
     public static void visualizarAlumno(){
- 
+        for(int j=0;j<alumnos.length;j++){
+            if(numAlum==i){
+                break;
+            }else if(alumnos[j]==null){
+                alumnos[j]=alumnos[j+1];
+                alumnos[j+1]=null;
+            }else{
+                numAlum++;
+            }
+        }
         do{
             System.out.print("**********************\n****CONSULTAS****\n**********************\n1.Por grupo ...\n2.Por edad ...\n3.Por nia ...\n4.Por apellidos\n-----------------------------------\n0.Volver al menu principal\nOpcion: ");
             opcion=lector.nextInt();
@@ -183,7 +202,7 @@ public class PrincipalAlumno{
                     }
                 }
             }else if(opcion==4){
-                System.out.print("Eliga el NIA que desee buscar\nNIA: ");
+                System.out.print("Introduzca el apellido\nNIA: ");
                 decision=lector.nextLine();
                 System.out.printf("%9s"+"%15s"+"%25s"+"%25s"+"%30s"+"%15s"+"%20s\n","NIA","Nombre","Apellidos","Fecha de nacimiento","Grupo","Teléfono","Edad");
                 System.out.println("---------------------------------------------------------------------------------------------------------------------------");
