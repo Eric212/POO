@@ -89,9 +89,34 @@ public class PrincipalBicicleta {
             break;
             case 2:
                 System.out.print("Introduzca la referencia de la bicicleta que desee vender");
-
+                venta(lector.nextInt());
+                lector.nextLine();
             break;
-        
+            case 3:
+                retificacion=0;
+                System.out.print("***********************\n** CONSULTA BICICLETA **\n***********************\n1.- Consultar por referencia ...\n2.- Consultar por marca ...\n3.- Consultar por modelo ...\n---------------------------------\n0.- Volver al menú principal");
+                retificacion=lector.nextInt();
+                lector.nextLine();
+                do{
+                    switch(retificacion){
+                        case 1:
+                            System.out.print("Introduce la referencia\nReferencia: ");
+                            consultaReferencia(lector.nextInt());
+                        break;
+                        case 2:
+                            System.out.print("Introduce la marca\nMarca: ");
+                            consultaMarca(lector.nextLine());
+                        break;
+                        case 3:
+                        break;
+                        case 0:
+                        break;
+                        default:
+                        break;
+                    }
+                }
+                while(lector.nextLine().equalsIgnoreCase("Si"));
+            break;
         }
     }
     public static boolean referencia(){
@@ -253,6 +278,14 @@ public class PrincipalBicicleta {
                 }else{
                     System.out.print("No hay existencias de la referencia: "+baseDatos[j].getExistencias());
                 }
+            }
+        }
+    }
+    public static void consultaReferencia(int referencia){
+        for(int j=0;j<baseDatos.length;j++){
+            if(baseDatos[i].getReferencia()==baseDatos[j].getReferencia()&&i!=j){
+                System.out.printf("\tDatos Bicicleta\n"+"---------------------------------------------\n"+"Referencia\t\t"+"%1d\n"+"Marca\t\t\t"+"%2s\n"+"Modelo\t\t\t"+"%2s\n"+"Peso\t\t\t"+"%2.1f"+"Kg\n"+"Pulgadas\t\t"+"%2.1f"+"\"\n"+"Motor\t\t\t"+"%2s\n"+"Fecha de fabricacion\t"+"%2tD\n"+"Precio\t\t\t"+"%2.2f"+"€\n"+"Existencias\t\t"+"%1d\n",baseDatos[i].getExistencias(),baseDatos[i].getMarca(),baseDatos[i].getModelo(),baseDatos[i].getPeso(),baseDatos[i].getRuedasPulgadas(),baseDatos[i].getMotor(),baseDatos[i].getFechaDeFabricacion().getTime(),baseDatos[i].getPrecio(),baseDatos[i].getExistencias());
+                break;
             }
         }
     }
