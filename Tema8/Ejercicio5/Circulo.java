@@ -1,6 +1,5 @@
 package Ejercicio5;
 import Ejercicio4.*;
-import java.math.*;
 public class Circulo {
     private Punto centro;
     private double radio;

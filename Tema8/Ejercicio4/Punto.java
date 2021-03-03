@@ -1,5 +1,4 @@
 package Ejercicio4;
-import java.math.*;
 public class Punto {
     private double x,y;
     public Punto(double x,double y){
