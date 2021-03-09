@@ -1,9 +1,11 @@
 package Ejercicio7;
-import java.util.Random;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 public class PrincipalHospital {
-    Random alea=new Random();
     static Scanner lector=new Scanner(System.in);
+    static Paciente[] baseDatos=new Paciente[1];
+    static Paciente[] aux;
     public static void main(String[] args) {
         menu();
     }

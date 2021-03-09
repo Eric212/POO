@@ -8,7 +8,7 @@ public class Ejercicio13{
 		boolean control=true;
 		while(control){
 			try{
-			System.out.println("Introduce el nuemro de segundos que quieres convertir a Días, Horas y minutos");	
+			System.out.println("Introduce el nuemro de segundos que quieres convertir a Días, Horas y minutos");
 			datosIntroducidos=lector.nextInt();
 			lector.nextLine();
 			while (datosIntroducidos >= 2147483647 || datosIntroducidos < 0) {
@@ -26,9 +26,7 @@ public class Ejercicio13{
 				control=false;
 			}catch(InputMismatchException ex){
 				System.out.println("\u26A0  \u26A0  \u26A0  \u26A0  Recuerda que solo se pueden numeros enteros y positivos  \u26A0  \u26A0  \u26A0  \u26A0");
-				lector.nextInt();
 				lector.nextLine();
-				System.out.println();
 			}
 		}
 	}
