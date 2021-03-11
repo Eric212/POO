@@ -1,3 +1,4 @@
+package como.ericsospedra.tema9;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 public class Ejercicio1 {
@@ -14,8 +15,7 @@ public class Ejercicio1 {
                     System.out.print("Numero: "+num+"\n");
                 }while(num>=0);
             }catch(InputMismatchException exaException){
-                System.out.print("Introduce un numero");
-                num=lector.nextInt();
+                System.out.print("Eso no es un numero\n");
                 lector.nextLine();
             }
         }while(num>=0);
