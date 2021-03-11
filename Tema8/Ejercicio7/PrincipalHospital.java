@@ -1,11 +1,11 @@
 package Ejercicio7;
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Scanner;
 public class PrincipalHospital {
     static Scanner lector=new Scanner(System.in);
     static Paciente[] baseDatos=new Paciente[1];
     static Paciente[] aux;
+    static Paciente paciente;
+    static int i=0;
     public static void main(String[] args) {
         menu();
     }
@@ -18,7 +18,12 @@ public class PrincipalHospital {
         }
     }
     public static void nuevoPaciente() {
-        System.out.print("Introduzca el nombre del paciente");
-        
+        baseDatos[i]=paciente=new Paciente(0,"", ' ', null, null, null, 0f, 0f, 0f, 0);
+        System.out.print("Introduzca el nombre del nuevo paciente");
+        baseDatos[i].setNombre(lector.nextLine());
+        while(comprobarNombre()){
+            System.out.print("Este paciente ya existe, introduce un nuevo Paciente");
+            baseDatos[i].setNombre(lector.nextLine());
+        }
     }
 }
