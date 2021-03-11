@@ -1,6 +1,8 @@
-package Tema4;
 public class PruebaEjercicio5{
 	public static void main(String[] args){
+		int pares;
+		int impares;
+		int multiplosDeCinco;
 		int contador;
 		int totalPar=0;
 		int totalImpar=0;
