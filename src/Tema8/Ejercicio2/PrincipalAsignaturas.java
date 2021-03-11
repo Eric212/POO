@@ -1,4 +1,4 @@
-package Ejercicio2;
+package Tema8.Ejercicio2;
 public class PrincipalAsignaturas {
     static Asignaturas asignatura1=new Asignaturas("Programacion", 1007, 1);
     static Asignaturas asignatura2=new Asignaturas("Sistemas", 1010, 1);

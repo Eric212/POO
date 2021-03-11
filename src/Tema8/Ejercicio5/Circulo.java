@@ -1,5 +1,5 @@
-package Ejercicio5;
-import Ejercicio4.*;
+package Tema8.Ejercicio5;
+import Tema8.Ejercicio4.*;
 public class Circulo {
     private Punto centro;
     private double radio;
@@ -17,10 +17,10 @@ public class Circulo {
         this.centro=new Punto();
         this.radio=PrincipalPunto.alea.nextDouble()*10;
     }
-    public Ejercicio4.Punto getCentro() {
+    public Tema8.Ejercicio4.Punto getCentro() {
         return this.centro;
     }
-    public void setCentro(Ejercicio4.Punto centro) {
+    public void setCentro(Tema8.Ejercicio4.Punto centro) {
         this.centro = centro;
     }
     public double getRadio() {

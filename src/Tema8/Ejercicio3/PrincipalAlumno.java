@@ -1,4 +1,4 @@
-package Ejercicio3;
+package Tema8.Ejercicio3;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
 public class PrincipalAlumno{

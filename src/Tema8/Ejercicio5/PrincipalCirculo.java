@@ -1,5 +1,5 @@
-package Ejercicio5;
-import Ejercicio4.*;
+package Tema8.Ejercicio5;
+import Tema8.Ejercicio4.*;
 public class PrincipalCirculo {
     static Circulo circulo1=new Circulo();
     static Circulo circulo2=new Circulo(new Punto(),PrincipalPunto.alea.nextDouble()*10);

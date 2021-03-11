@@ -1,4 +1,4 @@
-package Ejercicio6;
+package Tema8.Ejercicio6;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
 public class PrincipalBicicleta {

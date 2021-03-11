@@ -1,4 +1,4 @@
-package Ejercicio4;
+package Tema8.Ejercicio4;
 public class Punto {
     private double x,y;
     public Punto(double x,double y){

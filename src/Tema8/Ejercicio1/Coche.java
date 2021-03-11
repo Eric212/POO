@@ -1,4 +1,4 @@
-package Ejercicio1;
+package Tema8.Ejercicio1;
 public class Coche {
     private String modelo,color,matricula,tipoCoche,aFabricacion,modSeguro;
     private boolean metalizado;

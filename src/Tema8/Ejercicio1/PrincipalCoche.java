@@ -1,4 +1,4 @@
-package Ejercicio1;
+package Tema8.Ejercicio1;
 import java.util.Scanner;
 public class PrincipalCoche{
     static Scanner lector=new Scanner(System.in);

@@ -1,4 +1,4 @@
-package Ejercicio4;
+package Tema8.Ejercicio4;
 import java.util.Random;
 public class PrincipalPunto{
     public static Random alea=new Random();

@@ -1,4 +1,4 @@
-package Ejercicio2;
+package Tema8.Ejercicio2;
 public class Asignaturas {
     private String nombre;
     private int codigoAsig,curso;
