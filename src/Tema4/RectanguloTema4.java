@@ -1,6 +1,8 @@
+package Tema4;
+
 import java.util.Scanner;
-public class Rectangulo{
-	public static void main(String args[]){
+public class RectanguloTema4 {
+	public static void main(String[] args){
 		int alto;
 		int ancho;
 		Scanner lector=new Scanner(System.in);

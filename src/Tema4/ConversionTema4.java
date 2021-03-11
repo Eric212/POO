@@ -1,5 +1,7 @@
+package Tema4;
+
 import java.util.Scanner;
-public class Conversion{
+public class ConversionTema4 {
 	public static void main(String[] arg){
 		Scanner lector=new Scanner(System.in);
 		double pulgadas;

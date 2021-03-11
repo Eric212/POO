@@ -1,5 +1,6 @@
+package Tema4;
 import java.util.Scanner;
-public class Dominio{
+public class DominioTema4 {
 	public static void main(String[] args){
 		Scanner lector=new Scanner(System.in);
 		String nombre;

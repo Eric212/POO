@@ -1,7 +1,7 @@
-package como.ericsospedra.tema9;
+package como.ericsospedra.tema09;
 import java.util.Scanner;
 import java.util.InputMismatchException;
-public class Ejercicio2 {
+public class Ejercicio2Tema9 {
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
         boolean control=true;

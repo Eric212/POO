@@ -1,4 +1,4 @@
-package Ejercicio7;
+package Tema8.Ejercicio7;
 import java.util.GregorianCalendar;
 public class Persona {
     private int sip;

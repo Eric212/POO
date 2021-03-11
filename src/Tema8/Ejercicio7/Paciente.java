@@ -1,6 +1,7 @@
-package Ejercicio7;
+package Tema8.Ejercicio7;
+
 import java.util.GregorianCalendar;
-public class Paciente extends Persona{
+public class Paciente extends Persona {
     private GregorianCalendar fecha;
     private String sintomatologia;
     private float temperatura;

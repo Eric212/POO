@@ -1,4 +1,4 @@
-package Ejercicio7;
+package Tema8.Ejercicio7;
 import java.util.Scanner;
 public class PrincipalHospital {
     static Scanner lector=new Scanner(System.in);
@@ -21,9 +21,9 @@ public class PrincipalHospital {
         baseDatos[i]=paciente=new Paciente(0,"", ' ', null, null, null, 0f, 0f, 0f, 0);
         System.out.print("Introduzca el nombre del nuevo paciente");
         baseDatos[i].setNombre(lector.nextLine());
-        while(comprobarNombre()){
+        /*while(comprobarNombre()){
             System.out.print("Este paciente ya existe, introduce un nuevo Paciente");
             baseDatos[i].setNombre(lector.nextLine());
-        }
+        }*/
     }
 }

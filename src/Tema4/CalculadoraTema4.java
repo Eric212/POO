@@ -1,8 +1,10 @@
+package Tema4;
+
 import java.util.Scanner;
-public class Calculadora{
+public class CalculadoraTema4 {
 	public static void main(String[] args){
 		Scanner lector=new Scanner(System.in);
-		int control=1;
+		int control;
 		int tipo;
 		int funcion;
 		int contador=1;
@@ -229,6 +231,8 @@ public class Calculadora{
 						resultadoPreciso=primerOperandorDouble%segundoOperandorDouble;
 						System.out.println("La dividion de "+primerOperandorDouble+" por "+segundoOperandorDouble+" tiene un resto de: "+resultadoPreciso);
 					}
+				break;
+				default:
 				break;
 				}
 				System.out.println("Quiere calcular algo mas:\n0:No        1:Si");

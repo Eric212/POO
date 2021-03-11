@@ -1,5 +1,7 @@
+package Tema4;
+
 import java.util.Scanner;
-public class NumeroPrimo{
+public class NumeroPrimoTema4 {
 	public static void main(String[] arg){
 		Scanner lector= new Scanner(System.in);
 		System.out.println("Introudce hasta que numero quieres que se te muestren los numeros primos");

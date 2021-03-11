@@ -1,5 +1,7 @@
+package Tema4;
+
 import java.util.Scanner;
-public class Ejercicio6{
+public class Ejercicio6Tema4 {
 	public static void main(String[] args) {
 		Scanner lector=new Scanner(System.in);
 		float dinero;
